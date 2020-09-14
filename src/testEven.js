@@ -1,7 +1,8 @@
 import readlineSync from 'readline-sync';
 
-const askName = () => {
+const sayHello = () => {
   const name = readlineSync.question('May I hame your name? ');
+  console.log(`Hello, ${name}!`);
   return name;
 };
 
@@ -30,7 +31,8 @@ const askAndAnswer = (count = 0) => {
 
 const testEven = () => {
   console.log('Welcom to the Brain Games!');
-  const name = askName();
+  const name = sayHello();
+  console.log('Answer "yes" if the number is even, otherwise answer "no".');
   const resultGame = askAndAnswer();
   if (resultGame) {
     console.log(`Congratulations, ${name}!`);
