@@ -22,9 +22,9 @@ const roundGcd = () => {
   return [qustion, trueAnswer];
 };
 
-const calc = () => {
-  const questionGame = 'What is the result of the expression?';
+const gcd = () => {
+  const questionGame = 'Find the greatest common divisor of given numbers.';
   playGame(roundGcd, questionGame);
 };
 
-export default calc;
+export default gcd;
