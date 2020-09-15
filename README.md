@@ -14,3 +14,6 @@
 ## Step 8.
 [asciinema progression](https://asciinema.org/a/6VfUz7bZqLgJjbPw3UjKkQgbT)
 
+## Step 9.
+[asciinema prime](https://asciinema.org/a/MlTL1lzglVvpqI9DP6agaHl7g)
+
