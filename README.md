@@ -8,3 +8,6 @@
 ## Step 6.
 [asciinema calc](https://asciinema.org/a/Xud6rz2evLFBBTS7TLmTqNHEG)
 
+## Step 7.
+[asciinema gcd](https://asciinema.org/a/nIzkdBYPatL7DjZJRNm5TjANd)
+
