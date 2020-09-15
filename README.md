@@ -11,3 +11,6 @@
 ## Step 7.
 [asciinema gcd](https://asciinema.org/a/nIzkdBYPatL7DjZJRNm5TjANd)
 
+## Step 8.
+[asciinema progression](https://asciinema.org/a/6VfUz7bZqLgJjbPw3UjKkQgbT)
+
