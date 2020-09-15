@@ -3,5 +3,8 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/008116c603d88652087b/maintainability)](https://codeclimate.com/github/eyt5297/frontend-project-lvl1/maintainability)
 
 ## Step 5.
-[asciinema](https://asciinema.org/a/LsODE1c1fiUIVkNYTFoOp1GZ4)
+[asciinema even](https://asciinema.org/a/LsODE1c1fiUIVkNYTFoOp1GZ4)
+
+## Step 6.
+[asciinema calc](https://asciinema.org/a/Xud6rz2evLFBBTS7TLmTqNHEG)
 
