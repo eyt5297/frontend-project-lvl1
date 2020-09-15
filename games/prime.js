@@ -1,7 +1,11 @@
 import { playGame, getRandom } from '../src/index.js';
 
 const isPrime = (n) => {
+  if (n < 2) {
+    return false;
+  }
   if (n % 2 === 0) {
+    console.log(n);
     return n === 2;
   }
   let d = 3;
