@@ -1,17 +1,15 @@
-import { playGame, getRandom } from '../src/index.js';
+import playGame from '../index.js';
+import { getRandom } from '../utils.js';
 
-const isEven = (value) => ((value % 2 === 0) ? 'yes' : 'no');
+const description = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-const roundEven = () => {
-  const maxNumber = 100;
-  const number = getRandom(maxNumber);
-  const trueAnswer = isEven(number);
-  return [number, trueAnswer];
+const isEven = (value) => ((value % 2 === 0) ? true : false);
+
+const generateRoundData = () => {
+  const number = getRandom(0, 99);
+  const question = number.toString();
+  const answer = isEven(number) ? 'yes' : 'no';
+  return [question, answer];
 };
 
-const even = () => {
-  const questionGame = 'Answer "yes" if the number is even, otherwise answer "no".';
-  playGame(roundEven, questionGame);
-};
-
-export default even;
+export default () => playGame(generateRoundData, description);

@@ -16,7 +16,7 @@ const calculate = (operator, numberA, numberB) => {
   }
 };
 
-const roundCalc = () => {
+const generateRoundData = () => {
   const operators = '+-*';
   const numberA = getRandom(0, 99);
   const numberB = getRandom(0, 99);
@@ -28,8 +28,4 @@ const roundCalc = () => {
   return [question, answer];
 };
 
-const calc = () => {
-  playGame(roundCalc, description);
-};
-
-export default calc;
+export default () => playGame(generateRoundData, description);
