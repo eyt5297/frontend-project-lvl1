@@ -1,8 +1,8 @@
 import readlineSync from 'readline-sync';
 
 const playGame = (roundGame, description) => {
-  console.log('Welcom to the Brain Games!');
-  const name = readlineSync.question('May I hame your name? ');
+  console.log('Welcome to the Brain Games!');
+  const name = readlineSync.question('May I have your name? ');
   console.log(description);
 
   const maxRound = 3;
