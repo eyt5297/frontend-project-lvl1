@@ -1,4 +1,7 @@
-import { playGame, getRandom } from '../src/index.js';
+import playGame from '../index.js';
+import { getRandom } from '../utils.js';
+
+const description = 'Find the greatest common divisor of given numbers.';
 
 const findGcd = (a, b) => {
   if (a === b) {
@@ -12,19 +15,13 @@ const findGcd = (a, b) => {
   return findGcd(numberSmall, remainder);
 };
 
-const roundGcd = () => {
-  const maxNumber = 100;
-  const numberA = getRandom(maxNumber);
-  const numberB = getRandom(maxNumber);
+const generateRoundData = () => {
+  const numberA = getRandom(0, 99);
+  const numberB = getRandom(0, 99);
 
-  const trueAnswer = findGcd(numberA, numberB).toString();
-  const qustion = `${numberA} ${numberB}`;
-  return [qustion, trueAnswer];
+  const question = `${numberA} ${numberB}`;
+  const answer = findGcd(numberA, numberB).toString();
+  return [question, answer];
 };
 
-const gcd = () => {
-  const questionGame = 'Find the greatest common divisor of given numbers.';
-  playGame(roundGcd, questionGame);
-};
-
-export default gcd;
+export default () => playGame(generateRoundData, description);

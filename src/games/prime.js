@@ -1,11 +1,13 @@
-import { playGame, getRandom } from '../src/index.js';
+import playGame from '../index.js';
+import { getRandom } from '../utils.js';
+
+const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const isPrime = (n) => {
   if (n < 2) {
     return false;
   }
   if (n % 2 === 0) {
-    console.log(n);
     return n === 2;
   }
   let d = 3;
@@ -15,18 +17,12 @@ const isPrime = (n) => {
   return d * d > n;
 };
 
-const roundPrime = () => {
-  const maxNumber = 25;
-  const number = getRandom(maxNumber);
+const generateRoundData = () => {
+  const number = getRandom(0, 25);
 
-  const trueAnswer = isPrime(number) ? 'yes' : 'no';
-  const qustion = number;
-  return [qustion, trueAnswer];
+  const qustion = number.toString();
+  const answer = isPrime(number) ? 'yes' : 'no';
+  return [qustion, answer];
 };
 
-const prime = () => {
-  const questionGame = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-  playGame(roundPrime, questionGame);
-};
-
-export default prime;
+export default () => playGame(generateRoundData, description);
