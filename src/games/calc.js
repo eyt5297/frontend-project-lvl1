@@ -1,4 +1,5 @@
-import { playGame, getRandom } from '../index.js';
+import playGame from '../index.js';
+import { getRandom } from '../utils.js';
 
 const description = 'What is the result of the expression?';
 
@@ -17,12 +18,13 @@ const calculate = (operator, numberA, numberB) => {
 
 const roundCalc = () => {
   const operators = '+-*';
-  const numberA = getRandom(0, 100);
-  const numberB = getRandom(100);
-  const indexOperator = operators(getRandom(2));
+  const numberA = getRandom(0, 99);
+  const numberB = getRandom(0, 99);
+  const operator = operators[getRandom(0, operators.length - 1)];
 
-  const answer = calculate(operator, numberA, numberB);
-  const question = `${numberA} ${operations[numberOper].symbol} ${numberB}`;
+  const question = `${numberA} ${operator} ${numberB}`;
+  const answer = calculate(operator, numberA, numberB).toString();
+
   return [question, answer];
 };
 
