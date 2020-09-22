@@ -3,27 +3,27 @@ import { getRandom } from '../utils.js';
 
 const description = 'What number is missing in the progression?';
 
-const getProgression = (maxProgression, numberFirst, diffAP) => {
-  let addValue = numberFirst;
+const generateProgression = (progressionLength, firstNumber, step) => {
+  let curent = firstNumber;
   const result = [];
 
-  for (let i = 0; i < maxProgression; i += 1) {
-    result.push(addValue.toString());
-    addValue += diffAP;
+  for (let i = 0; i < progressionLength; i += 1) {
+    result.push(curent.toString());
+    curent += step;
   }
 
   return result;
 };
 
 const generateRoundData = () => {
-  const diffAP = getRandom(0, 20);
-  const numberFirst = getRandom(0, 20);
-  const maxProgression = 10;
-  const progress = getProgression(maxProgression, numberFirst, diffAP);
-  const missPos = getRandom(0, maxProgression - 1);
+  const step = getRandom(0, 20);
+  const firstNumber = getRandom(0, 20);
+  const progressionLength = 10;
+  const progress = generateProgression(progressionLength, firstNumber, step);
+  const hiddenNumberIndex = getRandom(0, progressionLength - 1);
 
-  const answer = progress[missPos];
-  progress[missPos] = '..';
+  const answer = progress[hiddenNumberIndex];
+  progress[hiddenNumberIndex] = '..';
   const qustion = progress.join(' ');
   return [qustion, answer];
 };
