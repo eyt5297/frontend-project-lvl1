@@ -1,6 +1,6 @@
 /* eslint-disable import/prefer-default-export */
 
 export const getRandom = (min, max) => {
-  const result = min + Math.floor(Math.random() * Math.floor(max + 1));
+  const result = Math.floor(Math.random() * (max - min + 1)) + min;
   return result;
 };
