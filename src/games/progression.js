@@ -19,12 +19,12 @@ const generateRoundData = () => {
   const step = getRandom(0, 20);
   const firstNumber = getRandom(0, 20);
   const progressionLength = 10;
-  const progress = generateProgression(progressionLength, firstNumber, step);
+  const progression = generateProgression(progressionLength, firstNumber, step);
   const hiddenNumberIndex = getRandom(0, progressionLength - 1);
 
-  const answer = progress[hiddenNumberIndex];
-  progress[hiddenNumberIndex] = '..';
-  const qustion = progress.join(' ');
+  const answer = progression[hiddenNumberIndex];
+  progression[hiddenNumberIndex] = '..';
+  const qustion = progression.join(' ');
   return [qustion, answer];
 };
 
