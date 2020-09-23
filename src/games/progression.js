@@ -4,12 +4,12 @@ import { getRandom } from '../utils.js';
 const description = 'What number is missing in the progression?';
 
 const generateProgression = (progressionLength, firstNumber, step) => {
-  let curent = firstNumber;
+  let current = firstNumber;
   const result = [];
 
   for (let i = 0; i < progressionLength; i += 1) {
-    result.push(curent.toString());
-    curent += step;
+    result.push(current.toString());
+    current += step;
   }
 
   return result;
